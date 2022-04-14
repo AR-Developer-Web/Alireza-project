@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <HEad>
+        <meta charset="utf-8"/>
+        
+      <style>
+          .button{
+            position: relative;
+            appearance: none;
+            background: #f72359;
+            padding: 1em 2em;
+            border: none;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            outline: none;
+            overflow:hidden;
+            border-radius: 100px;
+        }
+        .button span{
+            position: relative;
+            pointer-events: none;
+        }
+        .button::before{
+            --size: 0;
+            content: "";
+            position: absolute;
+            left: var(--x);
+            top: var(--y);
+            width: var(--size);
+            height: var(--size);
+            background: redial-gradient(circle closest-side , #4405f7 , transparent);
+            transform: translate(-50% , -50%);
+            transition: width 0.2s ease , height 0.2s ease;
+        }
+        .button:hover::before{
+            --size: 400px;
+        }
+          table , th , tr{
+              border: 5px inset black;
+              border-collapse: collapse;
+              border-color: #b3f0ff;
+          }
+          th{
+              
+              text-align: left;
+          }
+          
+          dd{
+              
+              color: brown;
+          }
+          body{
+            /* background with image */
+              /* background-image: url('image/20210325_185249.jpg');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: 100% 100%; */
+              background-color: powderblue;
+              font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+              
+          }
+    
+      </style>
+      <title>
+          teach lesson 2
+      </title>
+    </HEad>
+    <BODY >
+        
+        <h1  style= "border:2px solid tomato; text-align: center;";> Alireza make this site </h1>
+        <hr>
+        <strong>this line is strong</strong>
+        <br>
+        <br>
+        <textarea  id="myTextArea"></textarea>
+        <br>
+        <button onclick="Name()"></button>
+        <br>
+        <button onclick="Write()">Write my name</button>
+        <script>
+            document.querySelector('.button').onmousemove = e => {
+                const x = e.pageX - e.target.offsetleft;
+                const y = y.pageY - e.target.offsetTop;
+    
+                e.target.style.setProperty('--x' , `${x}px`);
+                e.target.style.setProperty('--y' , `${y}px`);
+
+            }
+        </script>
+        <p id="demo"></p>
+        <script>
+            var i = 0;
+            var text = "Saman"
+            var speed = 50;
+            window.addEventListener("load", function () {
+                if (navigator.onLine) {
+                    alert("Connect")
+                }
+                else {
+                    alert("disconnect")
+                }
+            });
+            window.addEventListener("offline", function () {
+                alert("disconnect")
+            });
+            window.addEventListener("online", function () {
+                alert("connect")
+            });
+            function Write() {
+                
+                if(i<text.length){
+                    
+                    document.getElementById("demo").innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(Write,speed);
+
+                }
+                
+            }
+            function Name()
+            {
+                var x = document.getElementById("myTextArea").vlue;
+                
+            }
+        </script>
+        <p></p>
+        <div class="list">
+            <dl>
+                <dt>Drink</dt>
+                <dd>caffe</dd>
+                <dd>Fruit juice</dd>
+                <dd>tea</dd>
+            </dl>
+            <dl>
+                <dt>pizza</dt>
+                <dd>- pepperoni</dd>
+                <dd>- meat</dd>
+            </dl>
+        </div>
+        <address>
+            hello my name is Alireza. <br>
+            my lastname is Ahmadi <br>
+            i'm 15 years old <br>
+            i love programming <br>
+        </address>
+        <i>word</i>
+        <br>
+        <table>
+            
+            <tr>
+                <th>Company</th>
+                <th>Country</th>
+                <th>City</th>
+            </tr>
+            <tr>
+                <td>Benz</td>
+                <td>Germany</td>
+                <td>Berlin</td>
+            </tr>
+        </table>
+        <br>
+        
+         <br>
+        
+         <button onclick="getElementById('demo').innerHTML=Date()">What is the time?</button>
+
+         <p id="demo"></p>
+        <em>this word is emphasized</em>
+        <p>Do not forget buy <mark>Milk</mark></p>
+        <p>my favorite laptap is <del>A
+            sus</del></p>
+        <p>this is <sub>Subescripted</sub> text.</p>
+        <a href="mailto:m.h.j.e.Javad@gmail.com">
+            send email
+        </a>
+        <p>this is <sup>Supescripted</sup> text.</p>
+        <p>The solar panels <q>is use for save the energy</q></p>
+        <p><cite>The scream</cite>by Edvard Munch. Painted in 1893</p>
+        <br>
+        <b>According to the International Corona<b>
+        <blockquote> all people should be vaccinated</blockquote>
+        <p><abbr title="Alireza Ahmadi">WHO</abbr> made this site.</p>
+        <p>This <!-- great text --> is a paragraph.</p>
+        <bdo dir="rtl">this text will be written right to left</bdo>0
+        <br>
+        <br>
+        <abbr title="what is abbr">abbr is one object for programming</abbr>
+        <br>
+        <a href="https://www.digikala.com/product/dkp-3164655/%D9%85%DB%8C%DA%A9%D8%B1%D9%88%D9%81%D9%86-%DB%8C%D9%82%D9%87-%D8%A7%DB%8C-%D9%85%DA%A9%D8%A7-%D9%85%D8%AF%D9%84-mm-2"target="_blank" rel="nofollow">  Digikal</a>
+        <br>
+        <a href="Page2.Html">  page 2 of my site</a>
+        <br>
+        <a href="Image/20210320_120114.jpg"> image</a>
+        <br>
+        <a href ="../MySite/IMG_20150707_020436.jpg"> image2</a>
+
+        <p style="font-size:xx-large;color: brown;" > I'm brown</p>
+        <h1 style="text-align:right" id="bt" ;></h1>
+        
+        <br>
+        <button class = "button">
+            <span>login</span>
+            </button>
+    </BODY>
+<html        
